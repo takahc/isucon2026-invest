@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>当日編 — kawasy context</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<header>
+  <p class="site-title"><a href="../../index.html">kawasy context</a></p>
+  <p class="tagline">ISUCON2026 優勝ユーザーハーネスを中心にした、公開情報の AI 参照用コーパス</p>
+  <nav>
+    <a href="../../index.html">ホーム</a>
+    <a href="../../context.md">AI用 context.md</a>
+    <a href="../../llms.txt">llms.txt</a>
+    <a href="../../pages/harness.html">ハーネス</a>
+    <a href="../../pages/unpublished.html">未公開項目</a>
+    <a href="../../pages/timeline.html">年表</a>
+    <a href="../../pages/posts.html">X投稿</a>
+    <a href="../../pages/talks.html">発表・OSS</a>
+    <a href="../../pages/transcripts.html">文字起こし案内</a>
+  </nav>
+</header>
+<main>
+
+<h1>ISUCON2026 で優勝しました（当日編）</h1>
+<p class="meta">本人記事 · 2026-11-02 公開、2026-11-11 更新 · <a href="https://zenn.dev/luvtechno/articles/isucon2026-competition-day">原典</a></p>
+<p>全文は原典を読む。ここでは公開サイト向けの要点だけを置く。</p>
+<ul>
+<li>ソロ Typing Bears、Claude Code / Opus 5.5、人間入力 0。最終 625,857、ピーク 629,638。</li>
+<li>最初のプロンプトと CONDITIONS.md の役割。詳細はシステムプロンプト追記側（全文は準備編でも未公開）。</li>
+<li>herdr の二ペイン、10:00 自動起動。8:53 に skill と Playwright ログイン。</li>
+<li>86 bench、19 commit、出力約 90 万トークン、キャッシュ読み約 1.3 億、最大コンテキスト約 967k。16:27 にコンパクション（966,927→22,752）。</li>
+<li>監査 14:03 と 16:31。停止判断。アーキテクチャは Postgres、memory 読み、asia2 書き込み順、ファイル複製、mmap。</li>
+<li>偽 AGENTS.md のプロンプトインジェクションは効かなかった。</li>
+<li>LayerX「チームメンバー、何人いるんで賞」。</li>
+</ul>
+
+</main>
+<footer>
+  <p>最終更新: 2026-11-15 22:57（Asia/Tokyo）。原典の URL を優先して参照すること。他人の記事全文・番組全文は掲載しない。</p>
+  <p><a href="../../index.html">トップ</a> · <a href="../../context.md">context.md</a> · <a href="../../data/sources.json">sources.json</a></p>
+</footer>
+</body>
+</html>

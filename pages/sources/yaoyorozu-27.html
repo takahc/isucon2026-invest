@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>八百万のOSS #27 — kawasy context</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<header>
+  <p class="site-title"><a href="../../index.html">kawasy context</a></p>
+  <p class="tagline">ISUCON2026 優勝ユーザーハーネスを中心にした、公開情報の AI 参照用コーパス</p>
+  <nav>
+    <a href="../../index.html">ホーム</a>
+    <a href="../../context.md">AI用 context.md</a>
+    <a href="../../llms.txt">llms.txt</a>
+    <a href="../../pages/harness.html">ハーネス</a>
+    <a href="../../pages/unpublished.html">未公開項目</a>
+    <a href="../../pages/timeline.html">年表</a>
+    <a href="../../pages/posts.html">X投稿</a>
+    <a href="../../pages/talks.html">発表・OSS</a>
+    <a href="../../pages/transcripts.html">文字起こし案内</a>
+  </nav>
+</header>
+<main>
+
+<h1>#27 緊急！ISUCON2026優勝者に聞く、完全自律AIエージェントの作り方と今後のOSS</h1>
+<p class="meta">2026-11-05 · 1:02:37 · 公式文字起こし: <a href="https://listen.style/p/ijgwip2j/wsv3ykry">LISTEN</a> · 動画: <a href="https://youtu.be/1mkLRFXJn54">YouTube 1mkLRFXJn54</a>（3758 秒）</p>
+<p>説明にある <a href="https://youtu.be/TeqlzPxliAI">youtu.be/TeqlzPxliAI</a> は同一タイトルだが、長さ取得が 63 秒でフルかどうか不確実。本編は 1mkLRFXJn54 を使う。</p>
+<p><strong>全文は公開しません。</strong>公式文字起こし URL を上に示した。以下は公式文字起こしに基づく時刻付き詳細要約。</p>
+<ul>
+<li><strong>00:00</strong> 導入。Typing Bears は一人会社かつチーム名。142 を前提に考え方を掘る。</li>
+<li><strong>03:00</strong> 最初から完全自律。土曜日の習いごとが理由。AI 利用可を支援先 Slack で見た。8 時間止まらず動き切ることを重視。9 月末にハーネスをほぼ破棄。</li>
+<li><strong>06:00</strong> AlphaEvolve 的な進化的探索は構想のみで不採用。独自エージェント / Agent SDK はフォールバック案。Claude Code で足りると判断。</li>
+<li><strong>12:08</strong> メトリクスツール（本人談「本邦初公開」かもしれない）。deploy+bench 連動で全ホストを計測。/proc を 1 秒・10 秒で取る。</li>
+<li><strong>15:08–18:00</strong> 空の構成の方が高いベストを出すことがあった。アドホックな計測スクリプト。汎用ツールは「90 点ぐらい」。1 年前なら汎用の方が良かった可能性はあるが未検証、と本人。</li>
+<li><strong>21:01</strong> 作り込み版は初手に約1時間。当日は 11:22 に 50 万点。</li>
+<li><strong>24:04</strong> 評価でもだいたい最初の4時間で上がり切る。自作問題（規模おおよそ2倍）でも読み切る。Private ISU は学習され団子になる、という話。</li>
+<li><strong>30:02</strong> Slack は通知のみ。本番の通知はなし。評価では OOM、API 障害、quota 等。電話通知はやめた。</li>
+<li><strong>33:01</strong> Remote Control は 10:05 と 10:15 頃だけ。競技セッションに一文字も書いていない。自律型が約10組いると思い、最後は運になるのでは、と考えていた。「作りすぎた説」。</li>
+<li><strong>39:02</strong> 薄い構成が思わぬ点を出したので捨て、終盤のばらつきを減らす知識だけ追加。</li>
+<li><strong>42:02 以降</strong> 汎用 OSS は不要か。既存 CLI は使っていた。herdr はスキル同梱。人間ワークフローの延長より AI 前提。4 フェーズ＋仮説記録は遅くなる。</li>
+<li><strong>54:00</strong> 人間の仕事は評価と構成判断。スキルをエージェントに逐次直させると矛盾する。外側ループはまだ HITL。</li>
+</ul>
+
+</main>
+<footer>
+  <p>最終更新: 2026-11-15 22:57（Asia/Tokyo）。原典の URL を優先して参照すること。他人の記事全文・番組全文は掲載しない。</p>
+  <p><a href="../../index.html">トップ</a> · <a href="../../context.md">context.md</a> · <a href="../../data/sources.json">sources.json</a></p>
+</footer>
+</body>
+</html>

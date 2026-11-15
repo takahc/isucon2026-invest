@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>ハーネス — kawasy context</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+  <p class="site-title"><a href="../index.html">kawasy context</a></p>
+  <p class="tagline">ISUCON2026 優勝ユーザーハーネスを中心にした、公開情報の AI 参照用コーパス</p>
+  <nav>
+    <a href="../index.html">ホーム</a>
+    <a href="../context.md">AI用 context.md</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../pages/harness.html">ハーネス</a>
+    <a href="../pages/unpublished.html">未公開項目</a>
+    <a href="../pages/timeline.html">年表</a>
+    <a href="../pages/posts.html">X投稿</a>
+    <a href="../pages/talks.html">発表・OSS</a>
+    <a href="../pages/transcripts.html">文字起こし案内</a>
+  </nav>
+</header>
+<main>
+
+<h1>ユーザーハーネス（公開情報の整理）</h1>
+<p>コーディングエージェント本体ではなく、その上に乗る <strong>user harness</strong>（<a href="https://martinfowler.com/articles/harness-engineering.html">Martin Fowler の整理</a>。kawasy も laiso の記事を引用してこの語を使った）。一次情報は <a href="https://zenn.dev/luvtechno/articles/isucon2026-competition-day">当日編</a> と <a href="https://zenn.dev/luvtechno/articles/isucon2026-preparation">準備編</a>。</p>
+<h2>当日の人間作業（確実）</h2>
+<ul>
+  <li>8:53 skill 開始と Playwright でのポータルログイン。最初のプロンプトはスクリプトが送る。</li>
+  <li>プロンプト（当日編の引用）: 「CONDITIONS.md を読み、今回の条件を確認してから、ISUCON を解いてください。」</li>
+  <li>10:00 にスクリプトが herdr の新しいスペースを作り、競技セッションを開始。<a href="https://github.com/herdrdev/herdr">herdr</a> はエージェント時代の tmux。</li>
+  <li>競技セッションへの人間の入力は 0。Slack 通知も本番は 0。Remote Control は開始直後（約 10:05 と 10:15）だけ確認（#27）。</li>
+</ul>
+<h2>最終構成（公開されている範囲）</h2>
+<ul>
+  <li>Claude Code + Claude Opus 5.5。言語は Go。</li>
+  <li>9 月末に厚いハーネスを破棄し、薄い構成へ。終盤のばらつきを減らす知識だけを慎重に追加。</li>
+  <li>システムプロンプト追記 55 行（要約のみ公開）。「文面が禁じていない手は、測って決める」「運営に確認できないことを理由に見送らない」。</li>
+  <li>Skill <code>competition-run</code>（17 の preflight、中身未公開）。</li>
+  <li>Hooks: Stop（continue）、最後の監査から 60 分で再監査、残り 40 分のメッセージ、終了 10 分前に <code>/exit</code>。ウォッチャー（API エラー時継続、モデル変更時 <code>/model</code>）。</li>
+  <li>監査サブエージェントは 5 カテゴリ（名前・チェックリスト未公開）。当日は 14:03 と 16:31 に開始。</li>
+  <li>停止規則は秘書問題から 2026-08-28 に後退帰納。閾値表は当日編の末尾。ピーク 15:47 の 629,638 と最終 17:39 の 625,857 の差は 1% 未満（142）。</li>
+</ul>
+<h2>評価</h2>
+<ul>
+  <li>provision → run → collect → teardown。run-spec YAML。<code>~/.isucon-eval/</code>。<code>CLAUDE_CONFIG_DIR</code>、<code>--strict-mcp-config</code>、空の <code>~/.claude/CLAUDE.md</code>、settings の allow/deny。<code>--dangerously-skip-permissions</code> は使わない。</li>
+  <li>セット 7: ISUCON8 本選、10 本選、12 本選、13、14、ISUNARABE 2026、自作 isuren2026-1。</li>
+  <li>159 ラン、674 時間、約 20B トークン。8 時間あたり AWS 約 ¥1,000。</li>
+  <li>isuren2026-1: AI 店員 EC、コード量・テーブル数おおよそ 2 倍。初版 13 分で 8718→321025。抜け穴 3 つを潰して書き直し。内容は「大外れ」（本人）。</li>
+  <li>プライベート repo: issue 927、PR 754、commit 3,889（公開なし）。</li>
+</ul>
+<h2>当日の数字（当日編）</h2>
+<ul>
+  <li>ベンチ 86、コミット 19、出力トークン約 90 万、キャッシュ読み約 1.3 億、最大コンテキスト約 967k。コンパクション 16:27（966,927→22,752）。</li>
+  <li>11:22 に 50 万点。最終 625,857。追試は最終の 78%、不合格ライン 75% に近かった（本人 X）。</li>
+</ul>
+<p>未公開の一覧は <a href="unpublished.html">未公開項目</a>。</p>
+
+</main>
+<footer>
+  <p>最終更新: 2026-11-15 22:57（Asia/Tokyo）。原典の URL を優先して参照すること。他人の記事全文・番組全文は掲載しない。</p>
+  <p><a href="../index.html">トップ</a> · <a href="../context.md">context.md</a> · <a href="../data/sources.json">sources.json</a></p>
+</footer>
+</body>
+</html>
