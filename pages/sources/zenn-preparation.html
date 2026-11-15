@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>準備編 — kawasy context</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<header>
+  <p class="site-title"><a href="../../index.html">kawasy context</a></p>
+  <p class="tagline">ISUCON2026 優勝ユーザーハーネスを中心にした、公開情報の AI 参照用コーパス</p>
+  <nav>
+    <a href="../../index.html">ホーム</a>
+    <a href="../../context.md">AI用 context.md</a>
+    <a href="../../llms.txt">llms.txt</a>
+    <a href="../../pages/harness.html">ハーネス</a>
+    <a href="../../pages/unpublished.html">未公開項目</a>
+    <a href="../../pages/timeline.html">年表</a>
+    <a href="../../pages/posts.html">X投稿</a>
+    <a href="../../pages/talks.html">発表・OSS</a>
+    <a href="../../pages/transcripts.html">文字起こし案内</a>
+  </nav>
+</header>
+<main>
+
+<h1>ISUCON2026 準備編</h1>
+<p class="meta">本人記事 · 2026-11-11 14:05 JST 公開、2026-11-12 05:40 JST 更新 · 文字数 27873（Zenn API）· <a href="https://zenn.dev/luvtechno/articles/isucon2026-preparation">原典</a> · Markdown: <a href="https://github.com/luvtechno/zenn/blob/main/articles/isucon2026-preparation.md">github.com/luvtechno/zenn</a></p>
+<p>当日編・インタビューになかった設定値が多い一次情報。全文は原典を読む。</p>
+<ul>
+<li>55 行のシステムプロンプト追記は要約のみ。「文面が禁じていない手は、測って決める」「運営に確認できないことを理由に見送らない」。</li>
+<li>Skill competition-run、17 チェック（中身未公開）。</li>
+<li>Stop hook、60 分ごとの再監査、残り 40 分、終了 10 分前 <code>/exit</code>。</li>
+<li>監査は 5 カテゴリ（名前・チェックリスト未公開）。問題名を隠し、前日に記録を1行に縮小。</li>
+<li>停止規則: 秘書問題 → 2026-08-28 後退帰納。閾値は当日編の表へ。</li>
+<li>評価ランナーと分離フラグ（CLAUDE_CONFIG_DIR、--strict-mcp-config、空の CLAUDE.md、allow/deny。--dangerously-skip-permissions は使わない）。</li>
+<li>評価セット 7、159 ラン、674 時間、約 20B トークン、8 時間あたり AWS 約 ¥1,000。</li>
+<li>isuren2026-1 の数字、Codex gpt-6.1-sol の ISUCON13（573,570）対 Opus 5.5 bare/max（1,238,539）。</li>
+<li>セーフガードで Opus 4.8 に落ちたら「第三者への攻撃ではない」と書いて <code>/model</code> で戻す。</li>
+<li>本番確認 3×c7i.large + 2×c6in.large、評価は 3×c5.large。repo は issue 927、PR 754、commit 3,889。</li>
+</ul>
+<p>準備編にないもの: herdr 起動の詳細、30 分停滞フック、プロンプトや CONDITIONS.md の全文、hook/skill ソース。</p>
+
+</main>
+<footer>
+  <p>最終更新: 2026-11-15 22:57（Asia/Tokyo）。原典の URL を優先して参照すること。他人の記事全文・番組全文は掲載しない。</p>
+  <p><a href="../../index.html">トップ</a> · <a href="../../context.md">context.md</a> · <a href="../../data/sources.json">sources.json</a></p>
+</footer>
+</body>
+</html>

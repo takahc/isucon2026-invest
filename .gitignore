@@ -1,0 +1,6 @@
+# This repository is PRIVATE and includes private-transcripts/.
+# Do not make it public. Do not enable GitHub Pages.
+*.listen.html
+.DS_Store
+__pycache__/
+_gen.py

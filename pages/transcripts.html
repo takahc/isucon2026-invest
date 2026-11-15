@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>文字起こし案内 — kawasy context</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+  <p class="site-title"><a href="../index.html">kawasy context</a></p>
+  <p class="tagline">ISUCON2026 優勝ユーザーハーネスを中心にした、公開情報の AI 参照用コーパス</p>
+  <nav>
+    <a href="../index.html">ホーム</a>
+    <a href="../context.md">AI用 context.md</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../pages/harness.html">ハーネス</a>
+    <a href="../pages/unpublished.html">未公開項目</a>
+    <a href="../pages/timeline.html">年表</a>
+    <a href="../pages/posts.html">X投稿</a>
+    <a href="../pages/talks.html">発表・OSS</a>
+    <a href="../pages/transcripts.html">文字起こし案内</a>
+  </nav>
+</header>
+<main>
+
+<h1>文字起こしの所在と精度</h1>
+<p>他人の番組の<strong>全文</strong>は公開サイトに載せていません。公式文字起こしがあるものは、その URL をここにリンクします。ローカルの全文は <code>/workspace/kawasy-context/private-transcripts/</code> です。公開デプロイに含めないでください。</p>
+<table>
+<tr><th>素材</th><th>公式文字起こし / 字幕</th><th>手段</th><th>非公開ファイル</th><th>精度</th></tr>
+<tr>
+  <td><a href="yaoyorozu-27.html">八百万のOSS #27</a></td>
+  <td><a href="https://listen.style/p/ijgwip2j/wsv3ykry">LISTEN 公式</a></td>
+  <td>LISTEN 公式を抽出。補助で YouTube 自動字幕（yt-dlp、重複除去）</td>
+  <td>yaoyorozu-oss-27.official.md / yaoyorozu-oss-27.youtube-auto-captions.md</td>
+  <td>公式を優先。公式は約3分間隔の時刻。自動字幕は誤変換・重複残りあり</td>
+</tr>
+<tr>
+  <td><a href="oss4-107.html">oss4.fun #107</a></td>
+  <td><a href="https://listen.style/p/oss4fun/isuoeipd">LISTEN 公式</a></td>
+  <td>LISTEN 公式を抽出。章時刻は公式目次を併記</td>
+  <td>oss4-fun-107.official.md</td>
+  <td>公式。本文の発話単位時刻は少ない。固有名詞の表記揺れあり</td>
+</tr>
+<tr>
+  <td><a href="fukabori-142.html">fukabori.fm 142</a></td>
+  <td>公式は未確認（なし）</td>
+  <td>公式 MP3（Art19 / podtrac）を 16 kHz mono にし、faster-whisper medium（int8, CPU, beam=1, VAD, ja）。PyAV の不具合を避けるため soundfile で読み込み。フォールバックに small</td>
+  <td>fukabori-fm-142.medium.txt（未完了なら .small.txt）</td>
+  <td>ASR。固有名詞・モデル名を誤りやすい。公開要約の数字は記事・公式と突合</td>
+</tr>
+<tr>
+  <td>fukabori.fm 40 / 41</td>
+  <td>公式は未確認（なし）</td>
+  <td>公式配信 MP3 を同様に faster-whisper（medium を優先）</td>
+  <td>fukabori-fm-40.txt / fukabori-fm-41.txt</td>
+  <td>ASR。ISUCON2026 ハーネスの資料ではない。作成済み。41 は単語間スペースが多く読みにくい</td>
+</tr>
+</table>
+<p>対象外: ムーザル <a href="https://youtu.be/r2liI7gfunE">youtu.be/r2liI7gfunE</a>（kawasy 出演なし）。fukabori.fm 52（ゲストは口井さん）。</p>
+<p>モデル: 精度のため small より上（medium）を使用。RAM の都合で beam=1。GPU なし。</p>
+
+</main>
+<footer>
+  <p>最終更新: 2026-11-15 22:57（Asia/Tokyo）。原典の URL を優先して参照すること。他人の記事全文・番組全文は掲載しない。</p>
+  <p><a href="../index.html">トップ</a> · <a href="../context.md">context.md</a> · <a href="../data/sources.json">sources.json</a></p>
+</footer>
+</body>
+</html>

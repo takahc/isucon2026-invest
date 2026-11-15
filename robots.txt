@@ -1,0 +1,6 @@
+# AI crawlers are welcome. This site is a public research corpus.
+User-agent: *
+Allow: /
+
+# Full transcripts of third-party shows are stored locally only and must not be published.
+Disallow: /private-transcripts/

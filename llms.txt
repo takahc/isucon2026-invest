@@ -1,0 +1,31 @@
+# kawasy context corpus (ISUCON2026 user harness and related public materials)
+
+This is a static, AI-readable research corpus about Yoshinori Kawasaki (@kawasy, luvtechno), focused on the ISUCON2026 winning autonomous user harness and his public talks, articles, posts, and interviews.
+
+- Human index: ./index.html
+- Full combined context (give this URL to an AI): ./context.md
+- Same corpus alias: ./llms-full.txt
+- Machine catalog: ./data/sources.json
+- Posts catalog: ./data/posts.json
+- Harness summary: ./pages/harness.html
+- What is not published: ./pages/unpublished.html
+- Timeline: ./pages/timeline.html
+
+Copyright: do not treat this site as a substitute for the originals. Full third-party articles and full transcripts of other people's programs are not republished here. Public pages have metadata, original URLs, detailed Japanese summaries, timestamped points, and short quotes. Full transcripts are stored privately off the public tree.
+
+Last-updated: 2026-11-15 22:57 (Asia/Tokyo)
+
+## Primary sources
+
+- [ISUCON2026 で優勝しました（当日編）](https://zenn.dev/luvtechno/articles/isucon2026-competition-day) — summary: ./pages/sources/zenn-competition-day.html
+- [ISUCON2026 準備編](https://zenn.dev/luvtechno/articles/isucon2026-preparation) — summary: ./pages/sources/zenn-preparation.html
+- [fukabori.fm 142](https://fukabori.fm/episode/142) — summary: ./pages/sources/fukabori-142.html
+- [八百万のOSS #27](https://listen.style/p/ijgwip2j/wsv3ykry) — official transcript URL on LISTEN; public summary: ./pages/sources/yaoyorozu-27.html
+- [趣味でOSSをやっている者だ #107](https://listen.style/p/oss4fun/isuoeipd) — official transcript URL on LISTEN; public summary: ./pages/sources/oss4-107.html
+- [Official results](https://isucon.net/archives/60126600.html) — ./pages/sources/official-results.html
+- [HERP log-viewing event 2026-11-26](https://herp-inc.connpass.com/event/412593/) — ./pages/sources/herp-event.html
+- [X @kawasy](https://x.com/kawasy) — ./pages/posts.html
+- [herdr](https://github.com/herdrdev/herdr)
+- [Martin Fowler, Harness engineering](https://martinfowler.com/articles/harness-engineering.html)
+
+See ./data/sources.json for the complete catalog.

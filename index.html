@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>ホーム — kawasy context</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <p class="site-title"><a href="index.html">kawasy context</a></p>
+  <p class="tagline">ISUCON2026 優勝ユーザーハーネスを中心にした、公開情報の AI 参照用コーパス</p>
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="context.md">AI用 context.md</a>
+    <a href="llms.txt">llms.txt</a>
+    <a href="pages/harness.html">ハーネス</a>
+    <a href="pages/unpublished.html">未公開項目</a>
+    <a href="pages/timeline.html">年表</a>
+    <a href="pages/posts.html">X投稿</a>
+    <a href="pages/talks.html">発表・OSS</a>
+    <a href="pages/transcripts.html">文字起こし案内</a>
+  </nav>
+</header>
+<main>
+
+<h1>kawasy context</h1>
+<p>Yoshinori Kawasaki（川崎 禎紀、<a href="https://x.com/kawasy">@kawasy</a>、luvtechno）の<strong>公開情報</strong>を、AI が URL ひとつで読めるようにまとめた静的サイトです。ISUCON2026（2026-10-31）でソロチーム Typing Bears が、Claude Code 上のユーザーハーネスを人間入力ゼロで8時間走らせて優勝（最終 625,857、ピーク 629,638）した経緯が中心です。過去の発表やインタビュー、第三者の言及、公式結果も含みます。</p>
+
+<div class="callout">
+  <p><strong>AI に渡す URL:</strong> このサイトの <a href="context.md"><code>context.md</code></a>（同じ内容: <a href="llms-full.txt"><code>llms-full.txt</code></a>）。短い目次は <a href="llms.txt"><code>llms.txt</code></a>。機械可読の一覧は <a href="data/sources.json"><code>data/sources.json</code></a>。</p>
+  <p>JavaScript は不要です。robots.txt は AI クローラを遮断しません。</p>
+</div>
+
+<p class="meta">最終更新: 2026-11-15 22:57（Asia/Tokyo）。ログインや課金は使わず、公開ページだけを収集しています。</p>
+
+<h2>まず読む一次情報</h2>
+<div class="grid">
+  <article class="card"><span class="chip">記事</span><h3><a href="https://zenn.dev/luvtechno/articles/isucon2026-competition-day">当日編（Zenn）</a></h3><p>競技当日の動き、スコア、構成。要約は <a href="pages/sources/zenn-competition-day.html">こちら</a>。</p></article>
+  <article class="card"><span class="chip">記事</span><h3><a href="https://zenn.dev/luvtechno/articles/isucon2026-preparation">準備編（Zenn）</a></h3><p>評価環境、hook、監査、自作問題。要約は <a href="pages/sources/zenn-preparation.html">こちら</a>。</p></article>
+  <article class="card"><span class="chip">音声</span><h3><a href="https://fukabori.fm/episode/142">fukabori.fm 142</a></h3><p>46:35。公式文字起こしなし。要約は <a href="pages/sources/fukabori-142.html">こちら</a>。</p></article>
+  <article class="card"><span class="chip">音声+公式文字起こし</span><h3><a href="https://listen.style/p/ijgwip2j/wsv3ykry">八百万のOSS #27</a></h3><p>1:02:37。公式文字起こしあり。<a href="pages/sources/yaoyorozu-27.html">時刻付き詳細要約</a>。</p></article>
+  <article class="card"><span class="chip">音声+公式文字起こし</span><h3><a href="https://listen.style/p/oss4fun/isuoeipd">oss4.fun #107 前編</a></h3><p>50:46。他チーム比較や未実施事項。<a href="pages/sources/oss4-107.html">時刻付き詳細要約</a>。</p></article>
+  <article class="card"><span class="chip">公式</span><h3><a href="https://isucon.net/archives/60126600.html">ISUCON2026 結果</a></h3><p>856 チーム / 1,596 人。優勝 Typing Bears 625,857。2位 475,546。</p></article>
+</div>
+
+<h2>サイト内の整理</h2>
+<ul>
+  <li><a href="pages/harness.html">ハーネスの公開情報まとめ</a>（lite 構成、評価、当日の数字）</li>
+  <li><a href="pages/unpublished.html">本人がまだ出していないもの</a></li>
+  <li><a href="pages/timeline.html">年表</a></li>
+  <li><a href="pages/posts.html">X の公開投稿</a></li>
+  <li><a href="pages/talks.html">プロフィール・OSS・スライド</a></li>
+  <li><a href="pages/sources/third-party.html">第三者記事・他チーム感想</a></li>
+  <li><a href="pages/transcripts.html">文字起こしの所在と精度</a>（全文は非公開ディレクトリ。公式 URL のみここにリンク）</li>
+  <li><a href="pages/sources/herp-event.html">2026-11-26 HERP ログ閲覧会</a>（開催前）</li>
+</ul>
+
+<h2>著作権と使い方</h2>
+<p>他人の記事の全文や、他人の番組の全文文字起こしは、この公開ツリーに置いていません。公開ページはメタデータ、原典 URL、詳細要約、時刻付きポイント、短い引用です。X の短い公開投稿は原文と URL を載せています。全文文字起こしはローカルの <code>private-transcripts/</code> にだけあります。公開デプロイ時はこのディレクトリを含めないでください。</p>
+
+</main>
+<footer>
+  <p>最終更新: 2026-11-15 22:57（Asia/Tokyo）。原典の URL を優先して参照すること。他人の記事全文・番組全文は掲載しない。</p>
+  <p><a href="index.html">トップ</a> · <a href="context.md">context.md</a> · <a href="data/sources.json">sources.json</a></p>
+</footer>
+</body>
+</html>
